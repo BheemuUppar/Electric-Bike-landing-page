@@ -15,8 +15,10 @@ const Home = () => {
     <section id="home" className="relative bg-white-100 min-h-screen flex flex-col items-center justify-center p-8">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">
-          Let's Elevate Your Ride Experience With Rhyno – Where Superiority Meets{' '}
-          <Typing
+          Let's Elevate Your Ride Experience With Rhyno 
+        </h1>
+          <h1 className="text-4xl font-bold mb-4"> – Where Superiority Meets{' '}</h1>
+          <h1 className="text-4xl font-bold mb-4 text-yellow-500"><Typing
             text={words}
             speed={100}
             eraseSpeed={50}
@@ -24,8 +26,7 @@ const Home = () => {
             typingDelay={500}
             cursorClassName="text-4xl"
             className="inline-block"
-          />
-        </h1>
+          /></h1>
       </div>
 
       <div className="w-full max-w-3xl mt-8">
