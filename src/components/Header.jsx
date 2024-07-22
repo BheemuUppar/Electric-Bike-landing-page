@@ -21,7 +21,7 @@ const Header = () => {
             <ProductMenu />
           </div>
           <Link to="/contact">Contact Us</Link>
-          <a href="#pre-book">Pre-Book Now</a>
+          <Link to="/pre-book">Pre Book</Link>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>

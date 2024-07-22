@@ -6,6 +6,7 @@ import Home from './components/Home';
 import AboutUs from './components/About';
 import ContactUs from './components/Contact';
 import Product from './components/Product';
+import PreBook from './components/PreBook';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/product/:name" element={<Product />} />
+        <Route path="/pre-book" element={<PreBook />} />
       </Routes>
       <Footer />
     </Router>
