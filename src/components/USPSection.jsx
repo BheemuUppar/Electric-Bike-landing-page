@@ -50,7 +50,7 @@ const USPSection = () => {
             className={`flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
           >
             <div className="w-full md:w-1/2 px-4">
-              <img src={usp.image} alt={usp.title} className="w-full h-auto object-cover rounded-lg shadow-lg" loading="lazy" />
+              <img src={usp.image} alt={usp.title} className="w-full h-auto object-cover rounded-lg shadow-lg"  />
             </div>
             <div className="w-full md:w-1/2 px-4">
               <h2 className="text-2xl font-semibold mb-4">{usp.title}</h2>
