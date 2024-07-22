@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
+import logo from '../assets/logo/Rhyno Logo .png';
+import groupBike from '../assets/bike-images/Copy of grp.png'
 
 const AboutUs = () => {
   const [ref1, inView1] = useInView({
@@ -26,7 +28,7 @@ const AboutUs = () => {
   });
 
   return (
-    <section id="about-us" className="bg-white p-8 flex flex-col items-center">
+    <section id="about-us" className="bg-black-300 text-white-400 p-8 flex flex-col items-center ">
       <div className="text-center max-w-4xl">
         <h2 className="text-3xl font-bold mb-4">About Us</h2>
       </div>
@@ -41,13 +43,13 @@ const AboutUs = () => {
           </p>
         </animated.div>
         <animated.div style={fadeIn1} className="md:w-1/2 p-4">
-          <img src="URL_TO_DUMMY_IMAGE_1" alt="About Us Image 1" className="w-full h-64 object-cover rounded shadow" />
+          <img src={logo} alt="About Us Image 1" className="w-full h-64 object-cover rounded shadow" />
         </animated.div>
       </div>
 
       <div ref={ref2} className="w-full flex flex-col md:flex-row items-center">
         <animated.div style={fadeIn2} className="md:w-1/2 p-4">
-          <img src="URL_TO_DUMMY_IMAGE_2" alt="About Us Image 2" className="w-full h-64 object-cover rounded shadow" />
+          <img src={groupBike} alt="About Us Image 2" className="w-full h-64 object-cover rounded shadow" />
         </animated.div>
         <animated.div style={fadeIn2} className="md:w-1/2 p-4">
           <p className="text-lg">

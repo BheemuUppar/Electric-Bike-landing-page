@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white-300 text-white sticky w-full z-10">
+    <header className="bg-black-300 text-white-300 sticky w-full z-10">
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link to="/" className="text-xl font-bold">RHyno EV</Link>
         <div className="hidden md:flex space-x-4">

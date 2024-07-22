@@ -1,9 +1,10 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import { Link } from "react-router-dom";
 
-export default function ProductMenu({menuList}) {
+export default function ProductMenu({ menuList }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -17,9 +18,9 @@ export default function ProductMenu({menuList}) {
     <div>
       <a
         id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
+        aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
         Products
@@ -30,14 +31,22 @@ export default function ProductMenu({menuList}) {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>SE03 Lite</MenuItem>
-        <MenuItem onClick={handleClose}>SE03</MenuItem>
-        <MenuItem onClick={handleClose}>SE03 Max</MenuItem>
-        <MenuItem onClick={handleClose}>Compare all</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to={'product/seo3_lite'}>SE03 Lite</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to={'product/seo3'}>SE03</Link>{" "}
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to={'product/seo3_max'}>SE03 Max</Link>{" "}
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to={'product/all'}> Compare all</Link>
+        </MenuItem>
       </Menu>
     </div>
-  )
+  );
 }

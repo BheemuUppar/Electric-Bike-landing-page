@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import AboutUs from './components/About';
 import ContactUs from './components/Contact';
-// import Product from './components/Product';
+import Product from './components/Product';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
-        {/* <Route path="/product/:id" element={<Product />} /> */}
+        <Route path="/product/:name" element={<Product />} />
       </Routes>
       <Footer />
     </Router>
