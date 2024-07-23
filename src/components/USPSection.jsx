@@ -47,12 +47,12 @@ const USPSection = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.3 }}
-            className={`flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+            className={`flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} flex-wrap`}
           >
-            <div className="w-full md:w-1/2 px-4">
+            <div className="w-full md:w-1/2 px-4  min-w-[300px]  ">
               <img src={usp.image} alt={usp.title} className="w-full h-auto object-cover rounded-lg shadow-lg"  />
             </div>
-            <div className="w-full md:w-1/2 px-4">
+            <div className="w-full md:w-1/2 px-4  min-w-[300px]  ">
               <h2 className="text-2xl font-semibold mb-4">{usp.title}</h2>
               <p>{usp.text}</p>
             </div>

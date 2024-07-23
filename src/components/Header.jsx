@@ -33,38 +33,76 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <Transition
-        show={isOpen}
-        enter="transition ease-out duration-100 transform"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="transition ease-in duration-75 transform"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
-        as="div"
+      {/* <Transition
+      show={isOpen}
+      enter="transition-opacity transition-transform duration-300"
+      enterFrom="opacity-0 -translate-y-10"
+      enterTo="opacity-100 translate-y-0"
+      leave="transition-opacity transition-transform duration-200"
+      leaveFrom="opacity-100 translate-y-0"
+      leaveTo="opacity-0 -translate-y-10"
+      as="div"
+    > */}
+      {isOpen && (
+        <div
+        className={`md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 flex flex-col items-center justify-center transform ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        } transition-transform duration-600`}
       >
-        {isOpen && (
-          <div className="md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 flex flex-col items-center justify-center">
-            <button onClick={toggleMenu} className="text-white focus:outline-none absolute top-4 right-4">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-            <nav className="flex flex-col space-y-4">
-              <Link to="/" onClick={toggleMenu} className="text-white text-lg">Home</Link>
-              <Link to="/about" onClick={toggleMenu} className="text-white text-lg">About Us</Link>
-              <Link to="/product/1" onClick={toggleMenu} className="text-white text-lg">SE03 Lite</Link>
-              <Link to="/product/2" onClick={toggleMenu} className="text-white text-lg">SE03</Link>
-              <Link to="/product/3" onClick={toggleMenu} className="text-white text-lg">SE03 Max</Link>
-              <Link to="/compare-all" onClick={toggleMenu} className="text-white text-lg">Compare All</Link>
-              <Link to="/contact" onClick={toggleMenu} className="text-white text-lg">Contact Us</Link>
-              <a href="#pre-book" onClick={toggleMenu} className="text-white text-lg">Pre-Book Now</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white text-lg">Instagram</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white text-lg">LinkedIn</a>
-            </nav>
-          </div>
-        )}
-      </Transition>
+        <button
+          onClick={toggleMenu}
+          className="text-white focus:outline-none absolute top-4 right-4"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <nav className="flex flex-col space-y-4 min-h-[300px] py-8 overflow-auto w-full text-center">
+          <Link to="/" onClick={toggleMenu} className="text-white text-lg">
+            Home
+          </Link>
+          <Link to="/about" onClick={toggleMenu} className="text-white text-lg">
+            About Us
+          </Link>
+          <Link to="/product/seo3_lite" onClick={toggleMenu} className="text-white text-lg">
+            SE03 Lite
+          </Link>
+          <Link to="/product/seo3" onClick={toggleMenu} className="text-white text-lg">
+            SE03
+          </Link>
+          <Link to="/product/seo3_max" onClick={toggleMenu} className="text-white text-lg">
+            SE03 Max
+          </Link>
+          <Link to="/product/all" onClick={toggleMenu} className="text-white text-lg">
+            Compare All
+          </Link>
+          <Link to="/contact" onClick={toggleMenu} className="text-white text-lg">
+            Contact Us
+          </Link>
+          <a href="#pre-book" onClick={toggleMenu} className="text-white text-lg">
+            Pre-Book Now
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white text-lg">
+            Instagram
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white text-lg">
+            LinkedIn
+          </a>
+        </nav>
+      </div>
+      )}
+    {/* </Transition> */}
     </header>
   );
 };

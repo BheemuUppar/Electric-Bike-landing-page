@@ -2,17 +2,19 @@ import React from "react";
 import Typing from "react-typing-effect";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import bike  from '../assets/bike-images/bike.png'
-import blackBike  from '../assets/bike-images/black.png';
-import blueBike  from '../assets/bike-images/blue.png';
+import bike from "../assets/bike-images/bike.png";
+import blackBike from "../assets/bike-images/black.png";
+import blueBike from "../assets/bike-images/blue.png";
 import USPSection from "./USPSection";
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const words = ["Elegance", "Minimalism", "Comfort"];
+  let navigate = useNavigate();
+
   const products = [
-    { name: "SE03 Lite", image: bike, link: "#se03-lite" },
-    { name: "SE03", image: blackBike, link: "#se03" },
-    { name: "SE03 Max", image: blueBike, link: "#se03-max" },
+    { name: "SE03 Lite", image: bike, link: "/product/seo3_lite" },
+    { name: "SE03", image: blackBike, link: "product/seo3" },
+    { name: "SE03 Max", image: blueBike, link: "/product/seo3_max" },
   ];
 
   return (
@@ -52,11 +54,14 @@ const Home = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full  object-cover rounded-t-lg" loading="lazy"
+                className="w-full  object-cover rounded-t-lg"
+                loading="lazy"
               />
               <button
-                onClick={() => (window.location.href = product.link)}
-                className="mt-4 bg-yellow-500 text-white py-2 px-4 rounded"
+                onClick={() => {
+                  navigate(product.link);
+                }}
+                className="mt-4 bg-yellow-500 text-black-300 py-2 px-4 rounded"
               >
                 Check Out {product.name}
               </button>
@@ -78,16 +83,18 @@ const Home = () => {
             </div>
           </div>
         </div> */}
-        <USPSection/>
+        <USPSection />
       </div>
 
       {/* Floating Pre-book now button */}
-      <a
-        href="#pre-book"
-        className="fixed bottom-4 right-4 bg-yellow-500 text-white py-2 px-4 rounded shadow-lg animate-bounce"
+      <button
+        onClick={()=>{
+          navigate('/pre-book')
+        }}
+        className="fixed bottom-4 right-4 bg-yellow-500 text-black-300 py-2 px-4 rounded shadow-lg animate-bounce"
       >
         Pre-book Now
-      </a>
+      </button>
     </section>
   );
 };
