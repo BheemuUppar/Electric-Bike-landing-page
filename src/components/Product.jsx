@@ -18,7 +18,6 @@ export default function Product() {
     } else if (location.pathname.endsWith("all")) {
       setBike(undefined);
     }
-    console.log(bike);
   }, [location]);
   return (
     <>

@@ -22,3 +22,13 @@ h6 {
   font-weight: 600;
   font-style: normal;
 }
+header .links a.active{
+  background-color: yellow;
+  color: black;
+  border-radius: 20px;
+  padding: 2px 7px;
+}
+.MuiList-root, .MuiList-padding, .MuiMenu-list{
+  background: #131313;
+    color: white
+}

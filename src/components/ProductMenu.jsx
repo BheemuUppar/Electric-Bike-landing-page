@@ -15,7 +15,7 @@ export default function ProductMenu({ menuList }) {
   };
 
   return (
-    <div>
+    <div >
       <a
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -30,6 +30,7 @@ export default function ProductMenu({ menuList }) {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}

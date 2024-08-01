@@ -36,12 +36,13 @@ const ProductDetails = ( {bike}) => {
             <motion.button
               key={index}
               className={`py-2 px-4 rounded-lg `}
-              style={{background:image.color}}
+              style={{background:image.color, outline: '2px solid white',
+                border: '1px solid pink', transform:`${image.color == selectedColor ? 'scale(1.3)':'none'}`}}
               onClick={() => handleColorChange(image.color)}
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
             >
-              {image.color}
+             
             </motion.button>
           ))}
         </div>
